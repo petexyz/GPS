@@ -16,14 +16,14 @@ gps_socket.connect()
 gps_socket.watch()
 
 for new_data in gps_socket:
-    if new_data:
-        data_stream.unpack(new_data)
+ if new_data:
+  data_stream.unpack(new_data)
 		
-	if data_stream.time is 'n/a':
-	  continue
+  if data_stream.time == 'n/a':
+   continue
 
-        print(str(data_stream.time) + ', ' + str(data_stream.alt) + ', ' + str(data_stream.lat) + ', ' + str(data_stream.lon))
-        f.write(str(data_stream.time) + ', ' + str(data_stream.alt) + ', ' + str(data_stream.lat) + ', ' + str(data_stream.lon))
-        f.write("\n")
-        time.sleep(2)
+  print(str(data_stream.time) + ', ' + str(data_stream.alt) + ', ' + str(data_stream.lat) + ', ' + str(data_stream.lon))
+  f.write(str(data_stream.time) + ', ' + str(data_stream.alt) + ', ' + str(data_stream.lat) + ', ' + str(data_stream.lon))
+  f.write("\n")
+  time.sleep(2)
         
