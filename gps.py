@@ -25,5 +25,5 @@ for new_data in gps_socket:
   print(str(data_stream.time) + ', ' + str(data_stream.alt) + ', ' + str(data_stream.lat) + ', ' + str(data_stream.lon) + ', ' + str(data_stream.speed) + ', ' + str(data_stream.track))
   f.write(str(data_stream.time) + ', ' + str(data_stream.alt) + ', ' + str(data_stream.lat) + ', ' + str(data_stream.lon) + ', ' + str(data_stream.speed) + ', ' + str(data_stream.track))
   f.write("\n")
-  time.sleep(2)
+  time.sleep(1)
         
